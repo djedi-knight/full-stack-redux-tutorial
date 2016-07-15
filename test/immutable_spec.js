@@ -3,13 +3,13 @@ import {List, Map} from 'immutable';
 
 describe('Immutability', () => {
 
-  describe('a Number', () => {
+  describe('A Number', () => {
 
     function increment(currentState) {
       return currentState + 1;
     }
 
-    it('is Immutable', () => {
+    it('Is Immutable', () => {
       let state = 42;
       let nextState = increment(state);
 
@@ -19,13 +19,13 @@ describe('Immutability', () => {
 
   });
 
-  describe('a List', () => {
+  describe('A List', () => {
 
     function addMovie(currentState, movie) {
       return currentState.push(movie);
     }
 
-    it('is Immutable', () => {
+    it('Is Immutable', () => {
       let state = List.of('Trainspotting', '28 Days Later');
       let nextState = addMovie(state, 'Sunshine');
 
@@ -42,13 +42,13 @@ describe('Immutability', () => {
 
   });
 
-  describe('a Tree', () => {
+  describe('A Tree', () => {
 
     function addMovie(currentState, movie) {
       return currentState.update('movies', movies => movies.push(movie));
     }
 
-    it('is Immutable', () => {
+    it('Is Immutable', () => {
       let state = Map({
         movies: List.of('Trainspotting', '28 Days Later')
       });
